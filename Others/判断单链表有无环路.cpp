@@ -1,4 +1,4 @@
-//²âÊÔÁ´±íÓĞÎŞ»·Â·
+//æµ‹è¯•é“¾è¡¨æœ‰æ— ç¯è·¯
 #include<iostream>
 using namespace std;
 struct ListNode {
@@ -21,10 +21,10 @@ void HasCircle(ListNode * p) {
 		p2 = p3;
 	}
 	if (p1 == pf) {
-		cout << "ÓĞ»·" << endl;
+		cout << "æœ‰ç¯" << endl;
 	}
 	else {
-		cout << "ÎŞ»·" << endl;
+		cout << "æ— ç¯" << endl;
 	}
 }
 int main() {
@@ -34,6 +34,6 @@ int main() {
 	a1.next = &a2;
 	a2.next = &a3;
 	a3.next = &a4;
-	//a4.next = &a2;  ÊÇ·ñÉèÖÃ»·
+	//a4.next = &a2;  //æ˜¯å¦è®¾ç½®ç¯
 	HasCircle(p);
 }
