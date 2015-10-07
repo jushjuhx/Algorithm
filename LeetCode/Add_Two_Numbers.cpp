@@ -11,11 +11,11 @@ using namespace std;
 
 
 struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
+	int val;
+	ListNode *next;
+	ListNode(int x) : val(x), next(NULL) {}
 };
-
+//主要思想:把两个链表共有长度的部分相加，并进位，直到到了某个链表的末尾，把长链表合并到已经相加的链表后面，同时如果有进位则进位
 class Solution {
 public:
 	ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
@@ -39,11 +39,11 @@ public:
 		}
 		if (NULL == l1 && NULL == l2) {
 			if (tmp1 == 1) {
-				ListNode* p2 =new ListNode(1);
+				ListNode* p2 = new ListNode(1);
 				p1->next = p2;
 			}
 		}
-		else{
+		else {
 			if (NULL == l1)
 				p1->next = l2;
 			if (tmp1 == 1) {
@@ -83,7 +83,7 @@ public:
 //	}
 //}
 int main() {
-	ListNode a1 = { 8 }, a2 = { 9 }, a3 = { 9 },a4 = { 9 };
+	ListNode a1 = { 8 }, a2 = { 9 }, a3 = { 9 }, a4 = { 9 };
 	ListNode b1 = { 2 };
 	ListNode * l1 = &a1;
 	ListNode * l2 = &b1;
